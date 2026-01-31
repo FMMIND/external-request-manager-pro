@@ -1,0 +1,927 @@
+/* ────────────────────────────────────────────────
+   External Request Manager Pro - Admin Styles
+   ──────────────────────────────────────────────── */
+
+:root {
+    --erm-primary: #2271b1;
+    --erm-danger: #d63638;
+    --erm-success: #46b450;
+    --erm-warning: #dba617;
+    --erm-blocked: #d63638;
+    --erm-allowed: #46b450;
+    --erm-border: #ddd;
+    --erm-bg-light: #f5f5f5;
+    --erm-text-dark: #2c3338;
+    --erm-text-light: #646970;
+}
+
+/* ────────────────────────────────────────────────
+   Main Layout
+   ──────────────────────────────────────────────── */
+
+.erm-pro-wrap {
+    background: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: var(--erm-text-dark);
+}
+
+.erm-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 30px 0;
+    margin: -20px -20px 30px -20px;
+    border-bottom: 3px solid var(--erm-primary);
+}
+
+.erm-header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.erm-subtitle {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0 20px;
+}
+
+/* ────────────────────────────────────────────────
+   Statistics Grid
+   ──────────────────────────────────────────────── */
+
+.erm-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.erm-stat-card {
+    background: #fff;
+    border: 1px solid var(--erm-border);
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.erm-stat-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.erm-stat-card.erm-stat-blocked {
+    border-left: 4px solid var(--erm-blocked);
+}
+
+.erm-stat-card.erm-stat-allowed {
+    border-left: 4px solid var(--erm-allowed);
+}
+
+.erm-stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--erm-primary);
+    margin-bottom: 8px;
+}
+
+.erm-stat-label {
+    font-size: 14px;
+    color: var(--erm-text-light);
+    font-weight: 500;
+}
+
+/* ────────────────────────────────────────────────
+   Filters Section
+   ──────────────────────────────────────────────── */
+
+.erm-filters-section {
+    background: #fff;
+    border: 1px solid var(--erm-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.erm-filter-tabs {
+    display: flex;
+    gap: 0;
+    margin: 0 0 20px 0;
+    padding: 0;
+    border-bottom: 2px solid var(--erm-border);
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.erm-filter-tabs li {
+    margin: 0;
+    padding: 0;
+}
+
+.erm-filter-tabs a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--erm-text-light);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.erm-filter-tabs a:hover {
+    color: var(--erm-primary);
+    background: var(--erm-bg-light);
+}
+
+.erm-filter-tabs a.active {
+    color: var(--erm-primary);
+    border-bottom-color: var(--erm-primary);
+}
+
+.erm-filter-tabs .count {
+    background: var(--erm-bg-light);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 6px;
+    font-weight: 600;
+}
+
+/* ────────────────────────────────────────────────
+   Search Form
+   ──────────────────────────────────────────────── */
+
+.erm-search-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.erm-search-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+    min-width: 300px;
+}
+
+.erm-search-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 15px;
+    border: 1px solid var(--erm-border);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.erm-search-input:focus {
+    outline: none;
+    border-color: var(--erm-primary);
+    box-shadow: 0 0 0 3px rgba(34, 113, 177, 0.1);
+}
+
+.erm-search-by {
+    padding: 10px 12px;
+    border: 1px solid var(--erm-border);
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.erm-search-by:focus {
+    outline: none;
+    border-color: var(--erm-primary);
+    box-shadow: 0 0 0 3px rgba(34, 113, 177, 0.1);
+}
+
+/* ────────────────────────────────────────────────
+   Toolbar
+   ──────────────────────────────────────────────── */
+
+.erm-toolbar {
+    background: var(--erm-bg-light);
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.erm-bulk-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.erm-action-select {
+    padding: 8px 10px;
+    border: 1px solid var(--erm-border);
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.erm-toolbar-right {
+    display: flex;
+    gap: 10px;
+}
+
+/* ────────────────────────────────────────────────
+   Table
+   ──────────────────────────────────────────────── */
+
+.erm-table-container {
+    overflow-x: auto;
+    background: #fff;
+    border: 1px solid var(--erm-border);
+    border-top: none;
+}
+
+.erm-requests-table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+.erm-requests-table thead {
+    background: var(--erm-bg-light);
+    border-bottom: 2px solid var(--erm-border);
+}
+
+.erm-requests-table th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--erm-text-dark);
+    border-right: 1px solid var(--erm-border);
+}
+
+.erm-requests-table th:last-child {
+    border-right: none;
+}
+
+.erm-requests-table tbody tr {
+    border-bottom: 1px solid var(--erm-border);
+    transition: background-color 0.2s ease;
+}
+
+.erm-requests-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
+.erm-requests-table td {
+    padding: 15px 12px;
+    border-right: 1px solid var(--erm-border);
+    font-size: 14px;
+}
+
+.erm-requests-table td:last-child {
+    border-right: none;
+}
+
+.erm-requests-table .erm-col-checkbox {
+    width: 50px;
+    text-align: center;
+}
+
+.erm-requests-table input[type="checkbox"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+/* ────────────────────────────────────────────────
+   Source Badge
+   ──────────────────────────────────────────────── */
+
+.erm-source-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.erm-source-badge.erm-plugin {
+    background: #e7f3ff;
+    color: #0073aa;
+}
+
+.erm-source-badge.erm-theme {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.erm-source-badge.erm-core {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* ────────────────────────────────────────────────
+   Status Badges
+   ──────────────────────────────────────────────── */
+
+.erm-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.erm-status-badge.erm-blocked {
+    background: rgba(214, 54, 56, 0.1);
+    color: var(--erm-blocked);
+}
+
+.erm-status-badge.erm-allowed {
+    background: rgba(70, 180, 80, 0.1);
+    color: var(--erm-allowed);
+}
+
+.erm-status-badge .dashicons {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+}
+
+/* ────────────────────────────────────────────────
+   Method Badge
+   ──────────────────────────────────────────────── */
+
+.erm-method-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #f0f0f0;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ────────────────────────────────────────────────
+   Pagination
+   ──────────────────────────────────────────────── */
+
+.erm-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 20px;
+    border-top: 1px solid var(--erm-border);
+    background: var(--erm-bg-light);
+    border-radius: 0 0 8px 8px;
+    flex-wrap: wrap;
+}
+
+.erm-page-number {
+    display: inline-block;
+    padding: 8px 12px;
+    min-width: 36px;
+    text-align: center;
+    border: 1px solid var(--erm-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--erm-text-light);
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.erm-page-number:hover {
+    background: #fff;
+    color: var(--erm-primary);
+    border-color: var(--erm-primary);
+}
+
+.erm-page-number.active {
+    background: var(--erm-primary);
+    color: #fff;
+    border-color: var(--erm-primary);
+}
+
+/* ────────────────────────────────────────────────
+   Empty State
+   ──────────────────────────────────────────────── */
+
+.erm-empty-state {
+    text-align: center !important;
+    padding: 60px 20px !important;
+}
+
+.erm-no-data {
+    color: var(--erm-text-light);
+}
+
+.erm-no-data p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* ────────────────────────────────────────────────
+   Modals
+   ──────────────────────────────────────────────── */
+
+.erm-modal {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.erm-modal.hidden {
+    display: none !important;
+}
+
+.erm-modal-content {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.erm-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--erm-border);
+}
+
+.erm-modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--erm-text-dark);
+}
+
+.erm-modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--erm-text-light);
+    cursor: pointer;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.erm-modal-close:hover {
+    background: var(--erm-bg-light);
+    color: var(--erm-text-dark);
+}
+
+.erm-modal-body {
+    padding: 20px;
+}
+
+.erm-modal-footer {
+    padding: 20px;
+    border-top: 1px solid var(--erm-border);
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* ────────────────────────────────────────────────
+   Clear Options
+   ──────────────────────────────────────────────── */
+
+.erm-clear-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.erm-clear-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    background: var(--erm-bg-light);
+    border-radius: 6px;
+    border: 1px solid var(--erm-border);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.erm-clear-option:hover {
+    background: #fff;
+    border-color: var(--erm-primary);
+}
+
+.erm-clear-option input[type="radio"] {
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.erm-clear-title {
+    display: block;
+    font-weight: 600;
+    color: var(--erm-text-dark);
+    margin-bottom: 4px;
+}
+
+.erm-clear-desc {
+    display: block;
+    font-size: 13px;
+    color: var(--erm-text-light);
+}
+
+/* ────────────────────────────────────────────────
+   Settings
+   ──────────────────────────────────────────────── */
+
+.erm-settings-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 20px;
+}
+
+.erm-settings-form {
+    background: #fff;
+    border: 1px solid var(--erm-border);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.erm-settings-section {
+    background: #fff;
+    border: 1px solid var(--erm-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.erm-settings-section h2 {
+    margin-top: 0;
+    font-size: 16px;
+    color: var(--erm-text-dark);
+    border-bottom: 2px solid var(--erm-border);
+    padding-bottom: 12px;
+}
+
+.erm-maintenance-box {
+    padding: 15px;
+    background: var(--erm-bg-light);
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.erm-maintenance-box:last-child {
+    margin-bottom: 0;
+}
+
+.erm-maintenance-box h3 {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--erm-text-dark);
+}
+
+.erm-maintenance-box p {
+    margin: 8px 0;
+    font-size: 13px;
+    color: var(--erm-text-light);
+}
+
+.erm-maintenance-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.erm-maintenance-options .button {
+    justify-content: flex-start;
+}
+
+.erm-maintenance-options .button .dashicons {
+    margin-right: 8px;
+}
+
+/* ────────────────────────────────────────────────
+   Footer
+   ──────────────────────────────────────────────── */
+
+.erm-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--erm-border);
+    text-align: right;
+}
+
+.erm-footer .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.erm-footer .button .dashicons {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+}
+
+/* ────────────────────────────────────────────────
+   Responsive Design
+   ──────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .erm-settings-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 782px) {
+    .erm-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .erm-header {
+        margin: -10px -10px 20px -10px;
+        padding: 20px 10px;
+    }
+    
+    .erm-header h1 {
+        padding: 0;
+        font-size: 24px;
+    }
+    
+    .erm-filter-tabs {
+        flex-direction: column;
+    }
+    
+    .erm-filter-tabs a {
+        border-bottom: 3px solid transparent;
+        border-left: 3px solid transparent;
+        padding-left: 10px;
+    }
+    
+    .erm-filter-tabs a.active {
+        border-bottom: none;
+        border-left: 3px solid var(--erm-primary);
+    }
+    
+    .erm-search-form {
+        flex-direction: column;
+    }
+    
+    .erm-search-input {
+        width: 100%;
+    }
+    
+    .erm-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .erm-bulk-actions {
+        flex-direction: column;
+    }
+    
+    .erm-bulk-actions select,
+    .erm-bulk-actions button {
+        width: 100%;
+    }
+    
+    .erm-requests-table {
+        font-size: 13px;
+    }
+    
+    .erm-requests-table td,
+    .erm-requests-table th {
+        padding: 10px 8px;
+    }
+    
+    .erm-modal-content {
+        max-width: 90%;
+    }
+}
+
+/* ────────────────────────────────────────────────
+   WordPress Admin Overrides
+   ──────────────────────────────────────────────── */
+
+.erm-pro-wrap .button {
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.erm-pro-wrap .button-primary {
+    background: var(--erm-primary);
+    color: #fff;
+    border: 1px solid var(--erm-primary);
+}
+
+.erm-pro-wrap .button-primary:hover {
+    background: #1d5aa0;
+    border-color: #1d5aa0;
+}
+
+.erm-pro-wrap .button-secondary {
+    background: #fff;
+    color: var(--erm-primary);
+    border: 1px solid var(--erm-primary);
+}
+
+.erm-pro-wrap .button-secondary:hover {
+    background: var(--erm-primary);
+    color: #fff;
+}
+
+.erm-pro-wrap .button-link-delete {
+    color: var(--erm-danger);
+    border-color: var(--erm-danger);
+}
+
+.erm-pro-wrap .button-link-delete:hover {
+    background: var(--erm-danger);
+    color: #fff;
+}
+
+.erm-pro-wrap .button-small {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+/* ────────────────────────────────────────────────
+   Detail Modal Body
+   ──────────────────────────────────────────────── */
+
+.erm-detail-item {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--erm-border);
+}
+
+.erm-detail-item:last-child {
+    border-bottom: none;
+}
+
+.erm-detail-label {
+    font-weight: 600;
+    color: var(--erm-text-dark);
+    min-width: 120px;
+    flex: 0 0 auto;
+}
+
+.erm-detail-value {
+    color: var(--erm-text-light);
+    word-break: break-all;
+    flex: 1;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.erm-detail-code {
+    background: var(--erm-bg-light);
+    padding: 8px 12px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+/* ────────────────────────────────────────────────
+   Loading States
+   ──────────────────────────────────────────────── */
+
+.erm-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.erm-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--erm-border);
+    border-top-color: var(--erm-primary);
+    border-radius: 50%;
+    animation: erm-spin 0.8s linear infinite;
+}
+
+@keyframes erm-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ────────────────────────────────────────────────
+   URLs Section
+   ──────────────────────────────────────────────── */
+
+.erm-urls-section {
+    margin-bottom: 20px;
+}
+
+.erm-urls-dropdown {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--erm-border);
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    max-height: 150px;
+}
+
+.erm-urls-dropdown:focus {
+    outline: none;
+    border-color: var(--erm-primary);
+    box-shadow: 0 0 0 3px rgba(34, 113, 177, 0.1);
+}
+
+#erm-selected-url-display {
+    padding: 8px 12px;
+    background: var(--erm-bg-light);
+    border: 1px solid var(--erm-border);
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    word-break: break-all;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.erm-modal-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.erm-modal-actions .button {
+    flex: 1;
+    min-width: 100px;
+}
+
+/* ────────────────────────────────────────────────
+   Rate Limit Section (Updated)
+   ──────────────────────────────────────────────── */
+
+.erm-rate-limit-section {
+    margin-bottom: 20px;
+}
+
+.erm-rate-limit-section h3 {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--erm-text-dark);
+}
+
+.erm-rate-limit-section p {
+    margin: 8px 0;
+    font-size: 13px;
+    color: var(--erm-text-light);
+}
+
+.erm-rate-limit-section input[type="number"] {
+    padding: 8px 12px;
+    border: 1px solid var(--erm-border);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.erm-rate-limit-section input[type="number"]:focus {
+    outline: none;
+    border-color: var(--erm-primary);
+    box-shadow: 0 0 0 3px rgba(34, 113, 177, 0.1);
+}

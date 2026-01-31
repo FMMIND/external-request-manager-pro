@@ -1,0 +1,30 @@
+{
+  "name": "yourusername/external-request-manager-pro",
+  "description": "Advanced external HTTP requests monitor, blocker & manager",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Yousuf Bahrami",
+      "email": "contact@wcoq.com",
+      "homepage": "https://wcoq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.6",
+    "wp-coding-standards/wpcs": "^2.3"
+  },
+  "scripts": {
+    "lint": "phpcs --standard=WordPress . --ignore=node_modules,vendor"
+  },
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "http-requests",
+    "monitoring",
+    "security"
+  ]
+}

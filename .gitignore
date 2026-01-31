@@ -1,0 +1,69 @@
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Composer
+composer.lock
+
+# Build output
+dist/
+build/
+*.zip
+
+# Testing
+tests/coverage/
+.phpunit.result.cache
+
+# WordPress
+wp-config.php
+wp-config-local.php
+wp-content/
+wp-includes/
+index.php
+license.txt
+readme.html
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS files
+.AppleDouble
+.LSOverride
+._*
+.apdisk
+.localized
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+
+# Logs
+*.log
+logs/
+
+# Local development files
+local/
